@@ -6,7 +6,7 @@ var dogAns;
 var colorAns;
 var animalAns;
 var fourthAns;
-var fifth;
+var fifthAns;
 console.log('challengeAccepted:', challengeAccptd);
 
 if (challengeAccptd == false) {
