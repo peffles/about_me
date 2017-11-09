@@ -21,7 +21,7 @@ if (challengeAccptd == false) {
         }
     }
 } else {
-    // Dog
+    // Dog question
     dogAns = prompt('Does Wyatt have a dog?');
     console.log('dogAnswer:', dogAns, dogAns.toUpperCase());
     if (dogAns.toUpperCase() === 'N' || dogAns.toUpperCase() === 'NO') {
@@ -66,26 +66,41 @@ if (challengeAccptd == false) {
         alert('tsk...tsk...tsk...');
     }
 }
-
-
-var guessLimit = 4;
-var guessCount = 0;
-var correctAnswer = 7;
+var sixGuessLimit = 4;
+var sixGuessCount = 0;
+var sixCorrectAnswer = 7;
 var currentAnswer = '';
 
 
-while (guessCount < guessLimit && currentAnswer != correctAnswer) {
+while (sixGuessCount < sixGuessLimit && sixCorrectAnswer != sixCorrectAnswer) {
     currentAnswer = prompt('What is my favorite number?');
-    guessCount++;
-    if (currentAnswer > correctAnswer) {
-        alert('Your guess is too high! Guesses: ' + guessCount);
-    } else if (currentAnswer < correctAnswer) {
-        alert('Your guess is too low! Guesses: ' + guessCount);
+    console.log('currentAnswer', currentAnswer)
+    sixGuessCount++;
+    if (currentAnswer > sixCorrectAnswer) {
+        alert('Your guess is too high! Guesses: ' + sixGuessCount);
+    } else if (currentAnswer < sixCorrectAnswer) {
+        alert('Your guess is too low! Guesses: ' + sixGuessCount);
     }
 }
-if (currentAnswer == correctAnswer) {
-    alert('Thats Right! My favorite number is ' + currentAnswer);
+if (currentAnswer == sixCorrectAnswer) {
+    alert('Thats Right! My favorite number is ' + sixCorrectAnswer);
 }
-if (guessCount = guessLimit) {
+if (sixGuessCount = sixGuessLimit) {
     alert('Too many guesses!');
 }
+var sevCurrentAnswer = '';
+var sevGuessLimit = 6;
+var sevGuessCount = 0;
+var sevCurrentAnswer = '';
+while (sevGuessCount < sevGuessLimit && sevCurrentAnswer != 'butterfinger' || 'snickers') {
+    sevCurrentAnswer = prompt('What is one of my favoite candy bars?');
+    console.log('currentAnswer', sevCurrentAnswer)
+    sevGuessCount++;
+     if (sevGuessCount = sevGuessLimit) {
+        alert('Too many guesses!');
+    }
+    if (sevCurrentAnswer === 'butterfinger' || 'snickers') {
+        alert('Thats Right! One of my favotite candy bars is: ' + sevCurrentAnswer);
+    }
+}
+alert('i think this is the last pop up.....');
