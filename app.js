@@ -8,6 +8,7 @@ var animalAns;
 var fourthAns;
 var fifthAns;
 var numAns;
+var tally = 0;
 console.log('challengeAccepted:', challengeAccptd);
 
 if (challengeAccptd == false) {
@@ -44,6 +45,7 @@ if (challengeAccptd == false) {
     console.log('animalAnswer', animalAns, animalAns.toUpperCase());
     if (animalAns.toUpperCase() === 'Y' || animalAns.toUpperCase() === 'YES') {
         alert('Correct! His favorite animal is Ailurus fulgens aka the Red panda!, they\'re really cute but they are also endangered.');
+        tally++;
     } else {
         alert('incorrect! His favorite animal is Ailurus fulgens aka the Red panda!, they\'re really cute but they are also endangered.');
     }
@@ -53,6 +55,7 @@ if (challengeAccptd == false) {
     console.log('fourthAnswer', fourthAns, animalAns.toUpperCase());
     if (fourthAns.toUpperCase() === 'N' || fourthAns.toUpperCase() === 'NO') {
         alert('Correct! Actually, he is terrified of horses... This is not a joke, horses are right next to spiders in his book.');
+        tally++;
     } else {
         alert('incorrect! Fun fact though, he is terrified of horses... This is not a joke, horses are right next to spiders in his book.');
     }
@@ -62,6 +65,7 @@ if (challengeAccptd == false) {
     console.log('fifthAnswer', fifthAns, fifthAns.toUpperCase());
     if (fifthAns.toUpperCase() === 'N' || fifthAns.toUpperCase() === 'NO') {
         alert('Correct!, You\'re actually paying attention!');
+        tally++;
     } else {
         alert('tsk...tsk...tsk...');
     }
@@ -69,9 +73,7 @@ if (challengeAccptd == false) {
 var sixGuessLimit = 4;
 var sixGuessCount = 0;
 var sixCorrectAnswer = 7;
-var currentAnswer = '';
-
-
+var currentAnswer;
 while (sixGuessCount < sixGuessLimit && sixCorrectAnswer != sixCorrectAnswer) {
     currentAnswer = prompt('What is my favorite number?');
     console.log('currentAnswer', currentAnswer)
@@ -84,23 +86,28 @@ while (sixGuessCount < sixGuessLimit && sixCorrectAnswer != sixCorrectAnswer) {
 }
 if (currentAnswer == sixCorrectAnswer) {
     alert('Thats Right! My favorite number is ' + sixCorrectAnswer);
+    tally++;
 }
-if (sixGuessCount = sixGuessLimit) {
+if (sixGuessCount >= sixGuessLimit) {
     alert('Too many guesses!');
 }
-var sevCurrentAnswer = '';
+var sevCurrentAnswer;
 var sevGuessLimit = 6;
 var sevGuessCount = 0;
 var sevCurrentAnswer = '';
-while (sevGuessCount < sevGuessLimit && sevCurrentAnswer != 'butterfinger' || 'snickers') {
+while (sevGuessCount < snsevGuessLimit && (sevCurrentAnswer != 'butterfinger' || sevCurrentAnswer != 'snickers')) {
     sevCurrentAnswer = prompt('What is one of my favoite candy bars?');
     console.log('currentAnswer', sevCurrentAnswer)
-    sevGuessCount++;
-     if (sevGuessCount = sevGuessLimit) {
-        alert('Too many guesses!');
-    }
-    if (sevCurrentAnswer === 'butterfinger' || 'snickers') {
+    if (sevCurrentAnswer === 'butterfinger' || sevCurrentAnswer === 'snickers') {
         alert('Thats Right! One of my favotite candy bars is: ' + sevCurrentAnswer);
+        tally++;
+        alert('QUESTIONS CORRECT: '+tally +' I think this is the last pop up.....');
+    } else {
+      alert('WRONG! Guesses: '+sevGuessCount);
     }
+    sevGuessCount++;
 }
-alert('i think this is the last pop up.....');
+
+if (sevCurrentAnswer != 'butterfinger' || sevCurrentAnswer != 'snickers') {
+  alert('Thats incorrect! Butterfinger and Snickers would be accepted!');
+}
