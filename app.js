@@ -72,15 +72,15 @@ var guessLim = 4;
 var favNum = prompt('What is my favorite number?')
 console.log('favorite number', favNum);
 while (favNum > numAns){
-  alert('Your guess is too high!');
-  var favNum = prompt('What is my favorite number?')
   counter ++;
+  alert('Your guess is too high! Guesses: '+counter);
+  var favNum = prompt('What is my favorite number?')
   console.log('favorite number', favNum);
 }
 while (favNum < numAns){
-  alert('Your guess is too low!');
-  var favNum = prompt('What is my favorite number?')
   counter ++;
+  alert('Your guess is too low! Guesses: '+counter);
+  var favNum = prompt('What is my favorite number?')
   console.log('favorite number', favNum);
 }
 if (numAns == favNum || counter >= guessLim) {
