@@ -7,6 +7,7 @@ var colorAns;
 var animalAns;
 var fourthAns;
 var fifthAns;
+var numAns;
 console.log('challengeAccepted:', challengeAccptd);
 
 if (challengeAccptd == false) {
@@ -56,7 +57,7 @@ if (challengeAccptd == false) {
         alert('incorrect! Fun fact though, he is terrified of horses... This is not a joke, horses are right next to spiders in his book.');
     }
 
-    // Challenge
+    // following along?
     fifthAns = prompt('Wyatt rides his horse Daisy every Saturday')
     console.log('fifthAnswer', fifthAns, fifthAns.toUpperCase());
     if (fifthAns.toUpperCase() === 'N' || fifthAns.toUpperCase() === 'NO') {
@@ -64,9 +65,26 @@ if (challengeAccptd == false) {
     } else {
         alert('tsk...tsk...tsk...');
     }
-
-    //help!!!!!
-    //parseInt
-    //toLowerCase
-    //toUpperCases
 }
+var counter = 0;
+var numAns = 7;
+var guessLim = 4; 
+var favNum = prompt('What is my favorite number?')
+console.log('favorite number', favNum);
+while (favNum > numAns){
+  alert('Your guess is too high!');
+  var favNum = prompt('What is my favorite number?')
+  counter ++;
+  console.log('favorite number', favNum);
+}
+while (favNum < numAns){
+  alert('Your guess is too low!');
+  var favNum = prompt('What is my favorite number?')
+  counter ++;
+  console.log('favorite number', favNum);
+}
+if (numAns == favNum || counter >= guessLim) {
+  alert('yyou dogggg');
+  console.log('favorite number', favNum);
+}
+
