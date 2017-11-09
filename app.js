@@ -66,25 +66,26 @@ if (challengeAccptd == false) {
         alert('tsk...tsk...tsk...');
     }
 }
-var counter = 0;
-var numAns = 7;
-var guessLim = 4; 
-var favNum = prompt('What is my favorite number?')
-console.log('favorite number', favNum);
-while (favNum > numAns){
-  counter ++;
-  alert('Your guess is too high! Guesses: '+counter);
-  var favNum = prompt('What is my favorite number?')
-  console.log('favorite number', favNum);
-}
-while (favNum < numAns){
-  counter ++;
-  alert('Your guess is too low! Guesses: '+counter);
-  var favNum = prompt('What is my favorite number?')
-  console.log('favorite number', favNum);
-}
-if (numAns == favNum || counter >= guessLim) {
-  alert('yyou dogggg');
-  console.log('favorite number', favNum);
-}
 
+
+var guessLimit = 4;
+var guessCount = 0;
+var correctAnswer = 7;
+var currentAnswer = '';
+
+
+while (guessCount < guessLimit && currentAnswer != correctAnswer) {
+    currentAnswer = prompt('What is my favorite number?');
+    guessCount++;
+    if (currentAnswer > correctAnswer) {
+        alert('Your guess is too high! Guesses: ' + guessCount);
+    } else if (currentAnswer < correctAnswer) {
+        alert('Your guess is too low! Guesses: ' + guessCount);
+    }
+}
+if (currentAnswer == correctAnswer) {
+    alert('Thats Right! My favorite number is ' + currentAnswer);
+}
+if (guessCount = guessLimit) {
+    alert('Too many guesses!');
+}
