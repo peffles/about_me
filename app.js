@@ -4,7 +4,6 @@ console.log(tally, 'score');
 
 function dogQuestion(dogAns) {
   dogAns = prompt('Does Wyatt have a dog?');
-  console.log('dogAnswer:', dogAns, dogAns.toUpperCase());
   if (dogAns.toUpperCase() === 'N' || dogAns.toUpperCase() === 'NO') {
     alert('Correct! He only has a cat, named puddy! (as in "I tot i taw a puddy tat")');
     tally++;
