@@ -73,7 +73,7 @@ fifthQuestion();
 function sixthQuestion (){
   var sixGuessLimit = 4;
   var sixGuessCount = 0;
-  var sixCorrectAnswer = Math.floor((Math.random() * 10)+ 1);
+  var sixCorrectAnswer = Math.floor((Math.random() * 10) + 1);
   var currentAnswer;
   while (sixGuessCount < sixGuessLimit && currentAnswer !== sixCorrectAnswer) {
     currentAnswer = prompt('What is my favorite number?');
@@ -112,9 +112,9 @@ function sevQuestion () {
       break;
     }
     else {
-      alert('WRONG! Guesses: '+ sevGuessCount);
+      alert('WRONG! Guesses: ' + sevGuessCount);
     }
-    if ((sevGuessCount === 5) && ((sevCurrentAnswer !== 'butterfinger' )||( sevCurrentAnswer !== 'snickers'))) {
+    if ((sevGuessCount === 5) && ((sevCurrentAnswer !== 'butterfinger' ) || ( sevCurrentAnswer !== 'snickers'))) {
       alert('Thats incorrect! Butterfinger and Snickers would be accepted!');
     }
     sevGuessCount++;
@@ -124,7 +124,7 @@ function sevQuestion () {
 sevQuestion();
 
 function keepTrack() {
-  alert ('Your score was '+ tally);
+  alert ('Your score was '  + tally);
   console.log(tally, 'score');
 }
 keepTrack();

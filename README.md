@@ -1,0 +1,2 @@
+# about_me
+During this assignment, I navigated KoKo as she went through my app.js file and wrapped all of my executable code into functions. Not only will this help people reading our code find out what our code does, but it will help split up this big sloppy mess of code that we had before. I was also the driver on KoKo's code and helped her wrap her code into functions for the very same purpose.
